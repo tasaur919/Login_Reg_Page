@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #outer{
+            min-height: 200px;
+            width: 300px;
+            background: linear-gradient(45deg,red,orange);
+            margin: 100px auto;
+            border-radius: 10px;
+            padding: 20px;
+            color: white;
+            font-size: 20px;
+        }
+        #header{
+            height: 45px;
+            width: 300px;
+            color: white;
+            text-align: center;
+            line-height: 45px;
+        }
+        #left{
+            height: 45px;
+            width: 150px;
+            float: left;
+            background: black;
+            border-radius: 4px;
+        }
+        #right{
+            height: 45px;
+            width: 150px;
+            float: right;
+            background: black;
+            border-radius: 4px;
+        }
+       .a:hover{
+        background: white !important;
+        color: black;
+        cursor: pointer;
+       }
+       .text{
+        width: 100%;
+        height: 40px;
+        border: none;
+        border-radius: 5px;
+        padding-left: 8px;
+        margin-bottom: 5px;
+        cursor: pointer;
+       }
+       .btn{
+        width: 100%;
+        height: 40px;
+        border: none;
+        background: black;
+        color: white;
+        cursor: pointer;
+        border-radius: 5px;
+        margin-top: 10px;
+       }
+       #reg,#login{
+        display: none;
+       }
+
+    </style>
+</head>
+<body>
+    <div id="outer">
+        <div id="header">
+            <div id="left" class="a" onclick="login()">
+                Login
+            </div>
+
+            <div id="right" class="a" onclick="register()">
+                Register
+            </div>
+        </div>
+            <div id="reg">
+                <h2>REGISTER</h2>
+                Name<br/>
+                <input type="text" class="text" placeholder="Enter your name"><br/>
+                EMAIL <br><input type="email" class="text"placeholder="Emai@gmail.com"><br/>
+                PASSWORD <br> <input type="password" class="text"placeholder="Enter your password"><br/>
+                MOBILE NO. <br> <input type="number" class="text"placeholder="Enter mobile No."><br/>
+                 <br> <input type="submit" class="btn" value="SAVE"><br/>
+            </div>
+            <div id="login">
+                  <h2>LOGIN</h2>
+                  EMAIL <br><input type="email" class="text"placeholder="Emai@gmail.com"><br/>
+                PASSWORD <br> <input type="password" class="text"placeholder="Enter your password"><br/>
+                <br> <input type="submit" class="btn" value="LOGIN"><br/>
+            </div>
+        
+    </div>
+
+    <script>
+         const r=document.getElementById("reg")
+         const l=document.getElementById("login")
+         function login(){
+            l.style.display="block"
+            r.style.display="none"
+         }
+         function register(){
+             r.style.display="block"
+             l.style.display="none"
+         }
+    </script>
+</body>
+</html>
